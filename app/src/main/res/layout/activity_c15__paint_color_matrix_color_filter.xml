@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/c20"
+        />
+
+    <TextView
+        android:paddingStart="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        android:text="色调"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:layout_marginTop="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:id="@+id/seek_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingStart="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        android:text="饱和度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:layout_marginTop="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:id="@+id/seek_saturation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingStart="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        android:text="亮度"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:layout_marginTop="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:id="@+id/seek_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wcc.www.customview.custom.C16_FoldDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/left"
+        android:name="com.wcc.www.customview.fragment.LeftMenuFragment"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:tag="left"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/xueshan" />
+    </RelativeLayout>
+
+</com.wcc.www.customview.custom.C16_FoldDrawerLayout>

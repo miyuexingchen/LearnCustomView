@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wcc.www.customview.ui.C24_RoundProgressBarWithNumberActivity">
+
+    <com.wcc.www.customview.custom.C29_RoundProgressBarWithNumberWithNumber
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/c29"
+        app:text_size="18sp"
+        app:text_color="@android:color/holo_green_dark"
+        app:reach_color="@color/colorAccent"
+        app:radius="100dp"
+        />
+</android.support.constraint.ConstraintLayout>

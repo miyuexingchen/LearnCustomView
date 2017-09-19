@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wcc.www.customview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.C1_CanvasBasicGraphicsActivity" />
+        <activity android:name=".ui.C2_CanvasConvertActivity" />
+        <activity android:name=".ui.C3_CanvasPictureTextActivity" />
+        <activity android:name=".ui.C4_PathBasicActivity" />
+        <activity android:name=".ui.C5_PathOtherActivity" />
+        <activity android:name=".ui.C6_PathMeasureActivity" />
+        <activity android:name=".ui.C7_PathMeasureAdvanceActivity" />
+        <activity android:name=".ui.C8_MatrixBasicActivity" />
+        <activity android:name=".ui.C9_ZoomImageViewActivity" />
+        <activity android:name=".ui.C10_ZoomImageViewExeciseActivity" />
+        <activity android:name=".ui.C11_MatrixMethodActivity" />
+        <activity android:name=".ui.C12_MatrixMethodActivity" />
+        <activity
+            android:name=".ui.C13_CustomViewExeciseActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".ui.C14_Matrix3DCameraActivity" />
+        <activity
+            android:name=".ui.C15_PaintColorMatrixColorFilterActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".ui.C16_PaintTextActivity" />
+        <activity android:name=".ui.C17_PaintPathEffectActivity" />
+        <activity
+            android:name=".ui.C18_PaintPorterDuffXfermodeActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".ui.C19_CircleViewActivity" />
+        <activity android:name=".ui.C20_ShaderActivity" />
+        <activity android:name=".ui.C21_PathActivity" />
+        <activity android:name=".ui.C22_BezierActivity" />
+        <activity android:name=".ui.C23_HorizontalProgressBarActivity"></activity>
+        <activity android:name=".ui.C24_RoundProgressBarWithNumberActivity">
+        </activity>
+        <activity android:name=".ui.C25_CanvasLayerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
