@@ -101,7 +101,6 @@ public class C12_MatrixMethodCustomView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
         for(int i = 0; i < mNumOfFold; i ++)
         {
             canvas.save();

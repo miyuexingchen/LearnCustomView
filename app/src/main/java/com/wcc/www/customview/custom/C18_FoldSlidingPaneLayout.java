@@ -19,34 +19,34 @@ public class C18_FoldSlidingPaneLayout extends SlidingPaneLayout {
         super(context, attrs);
     }
 
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        View view = getChildAt(0);
-        if(view != null)
-        {
-            removeView(view);
-            final C17_CustomViewExecise layout = new C17_CustomViewExecise(getContext());
-            layout.addView(view);
-            ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            addView(layout, 0, layoutParams);
-
-            setPanelSlideListener(new PanelSlideListener() {
-                @Override
-                public void onPanelSlide(View panel, float slideOffset) {
-                    layout.setFoldPercentage(slideOffset);
-                }
-
-                @Override
-                public void onPanelOpened(View panel) {
-
-                }
-
-                @Override
-                public void onPanelClosed(View panel) {
-
-                }
-            });
-        }
-    }
+//    @Override
+//    protected void onAttachedToWindow() {
+//        super.onAttachedToWindow();
+//        View view = getChildAt(0);
+//        if(view != null)
+//        {
+//            removeView(view);
+//            final C17_CustomViewExecise layout = new C17_CustomViewExecise(getContext());
+//            layout.addView(view);
+//            ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+//            addView(layout, 0, layoutParams);
+//
+//            setPanelSlideListener(new PanelSlideListener() {
+//                @Override
+//                public void onPanelSlide(View panel, float slideOffset) {
+//                    layout.setFoldPercentage(slideOffset);
+//                }
+//
+//                @Override
+//                public void onPanelOpened(View panel) {
+//
+//                }
+//
+//                @Override
+//                public void onPanelClosed(View panel) {
+//
+//                }
+//            });
+//        }
+//    }
 }
