@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wcc.www.customview.ui.C32_SquareLayoutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.wcc.www.customview.custom.C38_SquareLayout
+        android:background="#10ff0000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:background="#33ff0000"
+            android:layout_margin="30dp"
+            android:layout_width="30dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:padding="10dp"
+            android:background="#66ff0000"
+            android:layout_width="40dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="#ff0000"
+            android:layout_width="55dp"
+            android:layout_height="44dp" />
+
+        <TextView
+            android:background="#0fffff"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:background="#0aaaff"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+        android:background="#00fee1"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+        <TextView
+        android:background="#03ff3f"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+        <TextView
+        android:background="#0333ff"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+        <TextView
+        android:background="#0f999f"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+        <TextView
+        android:background="#0abcdf"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    </com.wcc.www.customview.custom.C38_SquareLayout>
+</LinearLayout>

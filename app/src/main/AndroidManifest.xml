@@ -40,18 +40,32 @@
         <activity android:name=".ui.C23_HorizontalProgressBarActivity" />
         <activity android:name=".ui.C24_RoundProgressBarWithNumberActivity" />
         <activity android:name=".ui.C25_CanvasLayerActivity" />
-        <activity android:name=".ui.C26_PageCurlActivity"></activity>
+        <activity android:name=".ui.C26_PageCurlActivity" />
         <activity
             android:name=".ui.C27_FoldActivity"
-            android:hardwareAccelerated="false">
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ui.C28_FoldActivity"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".ui.C29_FoldExerciseActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".ui.C30_MeasureImageActivity" />
+        <activity android:name=".ui.C31_IconActivity" />
+        <activity android:name=".ui.C32_SquareLayoutActivity" />
+        <activity android:name=".ui.C33_RefreshLayoutActivity1" />
+        <activity android:name=".ui.C34_ScrollMechanismActivity" />
+        <activity android:name=".ui.C35_RefreshLayoutActivity2"></activity>
+        <activity
+            android:name=".other.LauchModeLifeCycleExploreActivity"
+            android:launchMode="singleInstance">
+        </activity>
+        <activity android:name=".ui.C36_RefreshLayoutActivity3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.C28_FoldActivity"
-            android:hardwareAccelerated="false">
         </activity>
     </application>
 

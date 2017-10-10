@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wcc.www.customview.custom.C41_RefreshLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wcc.www.customview.ui.C35_RefreshLayoutActivity2">
+
+    <ListView
+        android:id="@+id/c41_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.wcc.www.customview.custom.C41_RefreshLayout2>

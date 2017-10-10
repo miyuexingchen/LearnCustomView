@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wcc.www.customview.custom.C39_RefreshLayout1 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/c39_rl"
+    tools:context="com.wcc.www.customview.ui.C33_RefreshLayoutActivity1">
+
+    <ImageView
+        android:id="@+id/iv_refresh"
+        android:background="@mipmap/a"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.wcc.www.customview.custom.C39_RefreshLayout1>

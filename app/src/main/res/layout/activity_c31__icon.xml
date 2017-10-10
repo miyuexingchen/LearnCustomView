@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wcc.www.customview.custom.C37_CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp"
+    android:background="#ff00ff"
+    tools:context="com.wcc.www.customview.ui.C31_IconActivity">
+
+    <com.wcc.www.customview.custom.C36_IconCustomView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/c36"
+        android:padding="100dp"
+        android:background="#336699"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:background="#666666"
+        android:padding="10dp"
+        android:text="hahaha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="#ffff00"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="whdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.wcc.www.customview.custom.C37_CustomLayout>

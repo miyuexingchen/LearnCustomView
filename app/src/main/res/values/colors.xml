@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="smart_ui_pullable_layout_text_color">#707070</color>
+    <color name="smart_ui_loading_layout_text_color">#515151</color>
 </resources>
