@@ -68,7 +68,6 @@ public class C42_RefreshLayout3 extends ViewGroup{
 
     private Scroller mLayoutScroller;  // 用于平滑滑动的Scroller对象
     private int effectivePullRange;    // 使拉动回调生效(触发)的滑动距离
-    private int ignorablePullRange;    // 可以忽略的拉动距离(超过此滑动距离，将不再允许parent view拦截触摸事件)
 
     private static final int STOP_PULL_BEHAVIOUR = 0X0502;
 
@@ -104,7 +103,6 @@ public class C42_RefreshLayout3 extends ViewGroup{
         mLayoutScroller = new Scroller(context);
 
         effectivePullRange = (int) getResources().getDimension(R.dimen.smart_ui_effective_pull_range);
-        ignorablePullRange = (int) getResources().getDimension(R.dimen.smart_ui_ignorable_pull_range);
     }
 
     @Override
@@ -138,12 +136,22 @@ public class C42_RefreshLayout3 extends ViewGroup{
 
     private void rotateArrow() {
         float rotation = ivArrowPullDown.getRotation();
+        float offset = (rotation + 180) % 180;
+        float target = rotation + 180 - offset;
+       // rotation 3541.7637 offset 121.76367 target 3600.0
+
+        System.out.println("rotation "+rotation+" offset "+offset+" target "+target);
+        ObjectAnimator arrowAnimator = ObjectAnimator.ofFloat(ivArrowPullDown, "rotation",
+                rotation, target);
+        arrowAnimator.setDuration(135);
+        arrowAnimator.start();
+        /*float rotation = ivArrowPullDown.getRotation();
         System.out.println("current rotation "+rotation);
         float target = rotation + 180;
         ObjectAnimator arrowAnimator = ObjectAnimator.ofFloat(ivArrowPullDown, "rotation",
                 rotation, target);
         arrowAnimator.setDuration(135);
-        arrowAnimator.start();
+        arrowAnimator.start();*/
     }
 
     @Override

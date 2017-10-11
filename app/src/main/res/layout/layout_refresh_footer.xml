@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal|top"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:background="@drawable/smart_ui_pullable_layout_indicate_arrow_bottom"
+        android:id="@+id/iv_footer_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_footer_loading"
+        android:background="@drawable/refresh_loading_animation"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv_footer_hint"
+        android:layout_toRightOf="@id/iv_footer_arrow"
+        android:text="上拉加载更多"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+</RelativeLayout>

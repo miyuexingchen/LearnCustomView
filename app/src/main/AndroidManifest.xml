@@ -55,12 +55,14 @@
         <activity android:name=".ui.C32_SquareLayoutActivity" />
         <activity android:name=".ui.C33_RefreshLayoutActivity1" />
         <activity android:name=".ui.C34_ScrollMechanismActivity" />
-        <activity android:name=".ui.C35_RefreshLayoutActivity2"></activity>
+        <activity android:name=".ui.C35_RefreshLayoutActivity2" />
         <activity
             android:name=".other.LauchModeLifeCycleExploreActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance" />
+        <activity android:name=".ui.C36_RefreshLayoutActivity3"></activity>
+        <activity android:name=".ui.C37_RefreshLayoutExerciseActivity">
         </activity>
-        <activity android:name=".ui.C36_RefreshLayoutActivity3">
+        <activity android:name=".ui.C38_RefreshLayoutExerciseActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
