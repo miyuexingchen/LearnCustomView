@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:background="@drawable/smart_ui_pullable_layout_indicate_arrow_bottom"
+        android:src="@drawable/smart_ui_pullable_layout_indicate_arrow_bottom"
         android:id="@+id/iv_footer_arrow"
         android:layout_width="30dp"
         android:layout_height="30dp" />

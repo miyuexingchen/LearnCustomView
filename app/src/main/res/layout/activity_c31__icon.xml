@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wcc.www.customview.custom.C37_CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wcc.www.customview.customstore.C37_CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +9,7 @@
     android:background="#ff00ff"
     tools:context="com.wcc.www.customview.ui.C31_IconActivity">
 
-    <com.wcc.www.customview.custom.C36_IconCustomView
+    <com.wcc.www.customview.customstore.C36_IconCustomView
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,4 +34,4 @@
         android:text="whdn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-</com.wcc.www.customview.custom.C37_CustomLayout>
+</com.wcc.www.customview.customstore.C37_CustomLayout>

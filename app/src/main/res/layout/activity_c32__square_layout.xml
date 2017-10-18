@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <com.wcc.www.customview.custom.C38_SquareLayout
+    <com.wcc.www.customview.customstore.C38_SquareLayout
         android:background="#10ff0000"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -69,5 +69,5 @@
         android:background="#0abcdf"
         android:layout_width="30dp"
         android:layout_height="30dp" />
-    </com.wcc.www.customview.custom.C38_SquareLayout>
+    </com.wcc.www.customview.customstore.C38_SquareLayout>
 </LinearLayout>

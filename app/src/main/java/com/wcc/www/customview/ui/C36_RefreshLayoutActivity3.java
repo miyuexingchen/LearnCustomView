@@ -8,13 +8,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C42_RefreshLayout3;
+import com.wcc.www.customview.customstore.C42_RefreshLayout3;
 
 import java.util.ArrayList;
 import java.util.List;

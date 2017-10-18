@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C11_MatrixMethodCustomView;
+import com.wcc.www.customview.customstore.C11_MatrixMethodCustomView;
 
 public class C11_MatrixMethodActivity extends AppCompatActivity {
 

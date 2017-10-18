@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C4_PathBasicCustomView;
+import com.wcc.www.customview.customstore.C4_PathBasicCustomView;
 
 public class C4_PathBasicActivity extends AppCompatActivity {
 

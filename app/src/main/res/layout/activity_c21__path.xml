@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C21_PathActivity">
 
-    <com.wcc.www.customview.custom.C26_PathCustomView
+    <com.wcc.www.customview.customstore.C26_PathCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c26"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C26_PageCurlActivity">
 
-    <com.wcc.www.customview.custom.C31_PageCurlCustomView
+    <com.wcc.www.customview.customstore.C31_PageCurlCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c31"

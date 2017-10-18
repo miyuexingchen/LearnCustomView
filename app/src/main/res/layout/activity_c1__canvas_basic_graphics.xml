@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C1_CanvasBasicGraphicsActivity">
 
-    <com.wcc.www.customview.custom.C1_CanvasBasicGraphicsCustomView
+    <com.wcc.www.customview.customstore.C1_CanvasBasicGraphicsCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c1"

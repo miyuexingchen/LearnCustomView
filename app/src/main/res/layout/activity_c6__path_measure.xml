@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C6_PathMeasureActivity">
 
-    <com.wcc.www.customview.custom.C6_PathMeasureCustomView
+    <com.wcc.www.customview.customstore.C6_PathMeasureCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c6"

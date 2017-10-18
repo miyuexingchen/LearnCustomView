@@ -59,15 +59,23 @@
         <activity
             android:name=".other.LauchModeLifeCycleExploreActivity"
             android:launchMode="singleInstance" />
-        <activity android:name=".ui.C36_RefreshLayoutActivity3"></activity>
-        <activity android:name=".ui.C37_RefreshLayoutExerciseActivity">
-        </activity>
+        <activity android:name=".ui.C36_RefreshLayoutActivity3" />
+        <activity android:name=".ui.C37_RefreshLayoutExerciseActivity"></activity>
         <activity android:name=".ui.C38_RefreshLayoutExerciseActivity2">
+        </activity>
+        <activity android:name=".ui.C39_2RefreshLayoutActivity"></activity>
+        <activity android:name=".ui.C40_2RefreshLayoutActivity2">
+        </activity>
+        <activity android:name=".ui.C41_Strengthen2RefreshLayoutActivity"></activity>
+        <activity android:name=".ui.C42_Strengthen2RefreshLayoutExerciseActivity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".ui.C43_XListViewActivity">
         </activity>
     </application>
 

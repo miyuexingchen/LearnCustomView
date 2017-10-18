@@ -7,7 +7,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C19_Rotate3DAnimation;
+import com.wcc.www.customview.customstore.C19_Rotate3DAnimation;
 
 public class C14_Matrix3DCameraActivity extends AppCompatActivity {
 

@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C44_RefreshLayoutExercise2;
+import com.wcc.www.customview.custom.C66_RefreshLayoutExercise13;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,7 @@ import java.util.List;
 public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
 
     private ListView lv;
-    private C44_RefreshLayoutExercise2 rl;
+    private C66_RefreshLayoutExercise13 rl;
     private int ids[] = {
             R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e,
     };
@@ -31,6 +30,7 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
+            int currentIndex = index;
             switch (msg.what)
             {
                 case 0:
@@ -38,7 +38,9 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
                         index = 0;
                     if(index < 0)
                         index = 0;
-                    idss.add(0, ids[index ++]);
+                    if(index != 3)
+                        idss.add(0, ids[index]);
+                    index ++;
                     break;
 
                 case 1:
@@ -46,11 +48,16 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
                         index = 4;
                     if(index < 0)
                         index = 4;
-                    idss.add(ids[index --]);
+                    if(index != 3)
+                        idss.add(ids[index]);
+                    index --;
                     break;
             }
             adapter.notifyDataSetChanged();
-            rl.stopPullBehavior();
+            if(currentIndex == 3)
+                rl.stopPullBehavior(C66_RefreshLayoutExercise13.State.FAILURE);
+            else
+                rl.stopPullBehavior(C66_RefreshLayoutExercise13.State.SUCCESS);
         }
     };
     private BaseAdapter adapter;
@@ -63,8 +70,8 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
         idss = new ArrayList<>();
         idss.add(ids[0]);
         lv = (ListView) findViewById(R.id.lv_c44);
-        rl = (C44_RefreshLayoutExercise2) lv.getParent();
-        rl.setOnPullListener(new C44_RefreshLayoutExercise2.OnPullListener() {
+        rl = (C66_RefreshLayoutExercise13) lv.getParent();
+        rl.setOnPullListener(new C66_RefreshLayoutExercise13.OnPullListener() {
             @Override
             public void pullDown() {
                 new Thread(){

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.wcc.www.customview.ui.C19_CircleViewActivity">
 
-    <com.wcc.www.customview.custom.C24_CircleCustomView
+    <com.wcc.www.customview.customstore.C24_CircleCustomView
         android:layout_gravity="center"
         android:layout_width="130dp"
         android:layout_height="130dp"

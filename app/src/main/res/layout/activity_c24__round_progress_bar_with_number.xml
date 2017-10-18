@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C24_RoundProgressBarWithNumberActivity">
 
-    <com.wcc.www.customview.custom.C29_RoundProgressBarWithNumberWithNumber
+    <com.wcc.www.customview.customstore.C29_RoundProgressBarWithNumberWithNumber
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c29"

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="#990000ff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginLeft="60dp"
+            android:id="@+id/iv_loadmore_arrow"
+            android:src="@drawable/pullup_icon_big"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_loadmore_loading"
+            android:src="@drawable/refreshing"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_loadmore_hint"
+            android:text="上拉加载更多"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_loadmore_hint"
+            android:visibility="invisible"
+            android:src="@drawable/refresh_succeed"
+            android:layout_toLeftOf="@+id/tv_loadmore_hint"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

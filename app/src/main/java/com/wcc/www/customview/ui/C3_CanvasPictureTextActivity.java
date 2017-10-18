@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C3_CanvasPictureTextCustomView;
+import com.wcc.www.customview.customstore.C3_CanvasPictureTextCustomView;
 
 public class C3_CanvasPictureTextActivity extends AppCompatActivity {
 

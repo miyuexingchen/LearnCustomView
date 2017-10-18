@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C17_PaintPathEffectActivity">
 
-    <com.wcc.www.customview.custom.C22_PaintPathEffectCustomView
+    <com.wcc.www.customview.customstore.C22_PaintPathEffectCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c22"

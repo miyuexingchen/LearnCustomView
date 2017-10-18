@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C26_PathCustomView;
+import com.wcc.www.customview.customstore.C26_PathCustomView;
 
 import java.util.ArrayList;
 import java.util.List;

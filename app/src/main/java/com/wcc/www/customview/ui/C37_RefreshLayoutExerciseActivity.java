@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C43_RefreshLayoutExercise1;
-import com.wcc.www.customview.custom.C44_RefreshLayoutExercise2;
+import com.wcc.www.customview.customstore.C44_RefreshLayoutExercise2;
 
 import java.util.ArrayList;
 import java.util.List;

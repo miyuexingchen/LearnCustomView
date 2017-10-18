@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C8_MatrixBasicActivity">
 
-    <com.wcc.www.customview.custom.C8_MatrixBasicCustomView
+    <com.wcc.www.customview.customstore.C8_MatrixBasicCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c8"

@@ -1,32 +1,13 @@
 package com.wcc.www.customview.ui;
 
-import android.content.Context;
-import android.graphics.Canvas;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.SparseArray;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
-import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C39_RefreshLayout1;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+import com.wcc.www.customview.customstore.C39_RefreshLayout1;
 
 public class C33_RefreshLayoutActivity1 extends AppCompatActivity {
 

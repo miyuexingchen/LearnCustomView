@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C2_CanvasConvertCustomView;
+import com.wcc.www.customview.customstore.C2_CanvasConvertCustomView;
 
 public class C2_CanvasConvertActivity extends AppCompatActivity {
 

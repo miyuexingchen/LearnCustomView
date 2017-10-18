@@ -1,15 +1,11 @@
 package com.wcc.www.customview.ui;
 
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C10_ZoomImageViewExeciseCustomView;
 
 public class C10_ZoomImageViewExeciseActivity extends AppCompatActivity {
 

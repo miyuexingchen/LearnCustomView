@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C34_ScrollMechanismActivity">
 
-    <com.wcc.www.customview.custom.C40_ScrollMechanism
+    <com.wcc.www.customview.customstore.C40_ScrollMechanism
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c40"
@@ -36,5 +36,5 @@
             android:text="3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </com.wcc.www.customview.custom.C40_ScrollMechanism>
+    </com.wcc.www.customview.customstore.C40_ScrollMechanism>
 </LinearLayout>

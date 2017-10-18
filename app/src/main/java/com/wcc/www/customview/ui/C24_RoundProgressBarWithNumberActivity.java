@@ -4,8 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C28_HorizontalProgressBarWithNumber;
-import com.wcc.www.customview.custom.C29_RoundProgressBarWithNumberWithNumber;
+import com.wcc.www.customview.customstore.C28_HorizontalProgressBarWithNumber;
+import com.wcc.www.customview.customstore.C29_RoundProgressBarWithNumberWithNumber;
 
 public class C24_RoundProgressBarWithNumberActivity extends AppCompatActivity {
 

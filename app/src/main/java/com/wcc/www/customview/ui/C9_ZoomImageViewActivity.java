@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C9_ZoomImageCustomView;
+import com.wcc.www.customview.customstore.C9_ZoomImageCustomView;
 
 public class C9_ZoomImageViewActivity extends AppCompatActivity {
 

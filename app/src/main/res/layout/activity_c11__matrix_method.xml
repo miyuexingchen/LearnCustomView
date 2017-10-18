@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     >
-    <com.wcc.www.customview.custom.C11_MatrixMethodCustomView
+    <com.wcc.www.customview.customstore.C11_MatrixMethodCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c11"

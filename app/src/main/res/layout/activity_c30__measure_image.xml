@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.wcc.www.customview.ui.C30_MeasureImageActivity">
 
-    <com.wcc.www.customview.custom.C35_MeasureImageCustomView
+    <com.wcc.www.customview.customstore.C35_MeasureImageCustomView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/c35"

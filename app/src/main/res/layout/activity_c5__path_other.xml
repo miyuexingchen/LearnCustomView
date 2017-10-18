@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C5_PathOtherActivity">
 
-    <com.wcc.www.customview.custom.C5_PathOtherCustomView
+    <com.wcc.www.customview.customstore.C5_PathOtherCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c5"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.wcc.www.customview.ui.C25_CanvasLayerActivity">
 
-    <com.wcc.www.customview.custom.C30_CanvasLayerCustomView
+    <com.wcc.www.customview.customstore.C30_CanvasLayerCustomView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/c30"

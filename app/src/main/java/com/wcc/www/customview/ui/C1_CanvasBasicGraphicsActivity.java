@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C1_CanvasBasicGraphicsCustomView;
+import com.wcc.www.customview.customstore.C1_CanvasBasicGraphicsCustomView;
 
 import java.util.ArrayList;
 
