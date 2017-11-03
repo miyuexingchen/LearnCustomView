@@ -21,10 +21,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by 王晨晨 on 2017/10/17.
+ * Created by 王晨晨 on 2017/10/19.
  */
 
-public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
+public class C74_Strengthen2RefreshLayoutExercise4 extends RelativeLayout {
 
     private CTimer mTimer;
     private final Animation arrowAnimation;
@@ -41,7 +41,7 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
     private ImageView iv_loadmore_hint;
     private TextView tv_loadmore_hint;
 
-    public C61_Strengthen2RefreshLayoutExercise2(Context context, AttributeSet attrs) {
+    public C74_Strengthen2RefreshLayoutExercise4(Context context, AttributeSet attrs) {
         super(context, attrs);
         mTimer = new CTimer(moveHandler);
         arrowAnimation = AnimationUtils.loadAnimation(context, R.anim.anim_arrow);
@@ -57,14 +57,14 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
         iv_refresh_loading.setVisibility(INVISIBLE);
         iv_refresh_hint.setVisibility(VISIBLE);
         iv_refresh_hint.setImageResource(R.drawable.refresh_succeed);
-        tv_refresh_hint.setText("刷新成功");
-        new Handler(){
+        tv_refresh_hint.setText("refresh succeed");
+        postDelayed(new Runnable() {
             @Override
-            public void handleMessage(Message msg) {
-                currentState = PULL_TO_REFRESH;
+            public void run() {
+                currentState = DOWN;
                 hide();
             }
-        }.sendEmptyMessageDelayed(0, 1000);
+        }, 500);
     }
 
     public void loadmoreFinish()
@@ -73,103 +73,89 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
         iv_loadmore_loading.setVisibility(INVISIBLE);
         iv_loadmore_hint.setVisibility(VISIBLE);
         iv_loadmore_hint.setImageResource(R.drawable.refresh_succeed);
-        tv_loadmore_hint.setText("加载更多成功");
-        new Handler(){
+        tv_loadmore_hint.setText("load more succeed");
+        postDelayed(new Runnable() {
             @Override
-            public void handleMessage(Message msg) {
-                currentState = PULL_TO_LOADMORE;
+            public void run() {
+                currentState = UP;
                 hide();
             }
-        }.sendEmptyMessageDelayed(0, 1000);
+        }, 500);
     }
 
-    private float mLastY;
     private boolean canPullDown = true, canPullUp = true;
-    private float ratio = 3;
+    private float mLasy;
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         float y = ev.getY();
         switch (ev.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                mLastY = y;
-                mTimer.cancel();
+                mLasy = y;
+                cancel();
                 releasePull();
                 break;
 
             case MotionEvent.ACTION_MOVE:
-                if(pullDownY > 0 || (canPullDown && canPullDown() && currentState != LOADMORE))
+                if(pullDownY > 0 || (canPullDown && !ViewCompat.canScrollVertically(contentView, -1) && currentState != UP_RELEASE))
                 {
-                    pullDownY += (y - mLastY) / ratio;
-                    if(pullDownY < 0) {
+                    pullDownY += (y - mLasy) / ratio;
+                    if(pullDownY < 0)
+                    {
                         pullDownY = 0;
-                        canPullDown = false;
                         canPullUp = true;
+                        canPullDown = false;
                     }
                     if(pullDownY > getMeasuredHeight())
                         pullDownY = getMeasuredHeight();
-                    if(currentState == REFRESH)
+                    if(currentState == DOWN_RELEASE)
                         whenRefreshOrLoadmoreDetermineToScroll = true;
-                }else if(pullUpY < 0 || (canPullUp && canPullUp() && currentState != REFRESH))
+                }else if(pullUpY < 0 || (canPullUp && !ViewCompat.canScrollVertically(contentView, 1) && currentState != DOWN_RELEASE))
                 {
-                    pullUpY += (y - mLastY) / ratio;
-                    if(pullUpY > 0) {
+                    pullUpY += (y - mLasy) / ratio;
+                    if(pullUpY > 0)
+                    {
                         pullUpY = 0;
-                        canPullDown = true;
                         canPullUp = false;
+                        canPullDown = true;
                     }
                     if(pullUpY < -getMeasuredHeight())
                         pullUpY = -getMeasuredHeight();
-                    if(currentState == LOADMORE)
+                    if(currentState == UP_RELEASE)
                         whenRefreshOrLoadmoreDetermineToScroll = true;
                 }
+                mLasy = y;
                 ratio = (float) (3 + 3 * Math.tan(Math.PI / 2 / getMeasuredHeight() * (pullDownY - pullUpY)));
-                mLastY = y;
                 requestLayout();
-                if(pullUpY < 0)
+                if(pullDownY > 0)
                 {
-                    if(-pullUpY <= distanceOverToScroll && currentState == RELEASE_TO_LOADMORE)
-                        changeState(PULL_TO_LOADMORE);
-                    if(-pullUpY >= distanceOverToScroll && currentState != RELEASE_TO_LOADMORE)
-                        changeState(RELEASE_TO_LOADMORE);
-                }else if(pullDownY > 0)
+                    if(pullDownY <= distanceOverToLoad && currentState == DOWN_RELEASABLE)
+                        changeState(DOWN);
+                    if(pullDownY >= distanceOverToLoad && currentState != DOWN_RELEASABLE)
+                        changeState(DOWN_RELEASABLE);
+                }else if(pullUpY < 0)
                 {
-                    if(pullDownY <= distanceOverToScroll && currentState == RELEASE_TO_REFRESH)
-                        changeState(PULL_TO_REFRESH);
-                    if(pullDownY >= distanceOverToScroll && currentState != RELEASE_TO_REFRESH)
-                        changeState(RELEASE_TO_REFRESH);
+                    if(-pullUpY <= distanceOverToLoad && currentState == UP_RELEASABLE)
+                        changeState(UP);
+                    if(-pullUpY >= distanceOverToLoad && currentState != UP_RELEASABLE)
+                        changeState(UP_RELEASABLE);
                 }
                 if(pullDownY - pullUpY > 8)
                     ev.setAction(MotionEvent.ACTION_CANCEL);
                 break;
 
             case MotionEvent.ACTION_UP:
-                System.out.println("up pullDownY "+pullDownY+" pullUpY "+pullUpY);
-                if(pullDownY > distanceOverToScroll || pullUpY < -distanceOverToScroll)
+                if(pullDownY > distanceOverToLoad || -pullUpY > distanceOverToLoad)
                     whenRefreshOrLoadmoreDetermineToScroll = false;
-                System.out.println("currentState "+currentState);
-                if(currentState == RELEASE_TO_REFRESH)
-                    changeState(REFRESH);
-                else if(currentState == RELEASE_TO_LOADMORE)
-                    changeState(LOADMORE);
+                if(currentState == DOWN_RELEASABLE)
+                    changeState(DOWN_RELEASE);
+                else if(currentState == UP_RELEASABLE)
+                    changeState(UP_RELEASE);
                 hide();
                 break;
         }
         super.dispatchTouchEvent(ev);
         return true;
-    }
-
-    private void hide()
-    {
-        mTimer.schedule(5);
-    }
-
-    private boolean canPullDown(){
-        return !ViewCompat.canScrollVertically(contentView, -1);
-    }
-
-    private boolean canPullUp(){
-        return !ViewCompat.canScrollVertically(contentView, 1);
     }
 
     private void releasePull()
@@ -178,24 +164,24 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
         canPullUp = true;
     }
 
-    private boolean isAreadyLayout;
+    private boolean isAlreadyLayout;
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        if(!isAreadyLayout)
+        if(!isAlreadyLayout)
         {
-            isAreadyLayout = true;
+            isAlreadyLayout = true;
             refreshView = getChildAt(0);
             contentView = getChildAt(1);
             loadmoreView = getChildAt(2);
-            distanceOverToScroll = ((ViewGroup) refreshView).getChildAt(0).getMeasuredHeight();
-            initRefreshAndLoadmoreView();
+            initRefreshViewAndLoadmoreView();
+            distanceOverToLoad = ((ViewGroup) refreshView).getChildAt(0).getMeasuredHeight();
         }
         refreshView.layout(0, (int) (pullDownY + pullUpY) - refreshView.getMeasuredHeight(), refreshView.getMeasuredWidth(), (int) (pullDownY + pullUpY));
         contentView.layout(0, (int) (pullDownY + pullUpY), contentView.getMeasuredWidth(), (int) (pullDownY + pullUpY) + contentView.getMeasuredHeight());
         loadmoreView.layout(0, (int) (pullDownY + pullUpY) + contentView.getMeasuredHeight(), loadmoreView.getMeasuredWidth(), (int) (pullDownY + pullUpY) + contentView.getMeasuredHeight() + loadmoreView.getMeasuredHeight());
     }
 
-    private void initRefreshAndLoadmoreView()
+    private void initRefreshViewAndLoadmoreView()
     {
         iv_refresh_arrow = (ImageView) refreshView.findViewById(R.id.iv_refresh_arrow);
         iv_refresh_loading = (ImageView) refreshView.findViewById(R.id.iv_refresh_loading);
@@ -209,97 +195,106 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
 
     private float moveSpeed = 8;
     private float pullDownY, pullUpY;
+    private float ratio = 3;
     private int currentState;
+    public static final int DOWN = 0;
+    public static final int DOWN_RELEASABLE = 1;
+    public static final int DOWN_RELEASE = 2;
+    public static final int UP = 3;
+    public static final int UP_RELEASABLE = 4;
+    public static final int UP_RELEASE = 5;
+    private int distanceOverToLoad;
     private boolean whenRefreshOrLoadmoreDetermineToScroll;
-    private int distanceOverToScroll;
-    public static final int PULL_TO_REFRESH = 0;
-    public static final int RELEASE_TO_REFRESH = 1;
-    public static final int REFRESH = 3;
-    public static final int PULL_TO_LOADMORE = 4;
-    public static final int RELEASE_TO_LOADMORE = 5;
-    public static final int LOADMORE = 6;
     private Handler moveHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            if(pullDownY > 0)
-                pullDownY -= moveSpeed;
-            else if(pullUpY < 0)
-                pullUpY += moveSpeed;
+            if(pullDownY > 0) pullDownY -= moveSpeed;
+            else if(pullUpY < 0) pullUpY += moveSpeed;
             moveSpeed = (float) (8 + 5 * Math.tan(Math.PI / 2 / getMeasuredHeight() * (pullDownY - pullUpY)));
-            if (!whenRefreshOrLoadmoreDetermineToScroll) {
-                if(currentState == REFRESH && pullDownY <= distanceOverToScroll)
+            if(!whenRefreshOrLoadmoreDetermineToScroll)
+            {
+                if(currentState == DOWN_RELEASE && pullDownY <= distanceOverToLoad)
                 {
-                    pullDownY = distanceOverToScroll;
-                    mTimer.cancel();
-                }else if(currentState == LOADMORE && -pullUpY <= distanceOverToScroll)
+                    pullDownY = distanceOverToLoad;
+                    cancel();
+                }else if(currentState == UP_RELEASE && -pullUpY <= distanceOverToLoad)
                 {
-                    pullUpY = -distanceOverToScroll;
-                    mTimer.cancel();
+                    pullUpY = -distanceOverToLoad;
+                    cancel();
                 }
             }
             if(pullDownY < 0)
             {
                 pullDownY = 0;
-                if(currentState != REFRESH)
-                    changeState(PULL_TO_REFRESH);
-                mTimer.cancel();
-            }
-            if(pullUpY > 0)
+                if(currentState != DOWN_RELEASE)
+                    changeState(DOWN);
+                cancel();
+            }else if(pullUpY > 0)
             {
                 pullUpY = 0;
-                if(currentState != LOADMORE)
-                    changeState(PULL_TO_LOADMORE);
-                mTimer.cancel();
+                if(currentState != UP_RELEASE)
+                    changeState(UP);
+                cancel();
             }
             requestLayout();
         }
     };
+
+    private void cancel()
+    {
+        mTimer.cancel();
+    }
+
+    private void hide()
+    {
+        mTimer.schedule(5);
+    }
 
     private void changeState(int state)
     {
         currentState = state;
         switch (state)
         {
-            case PULL_TO_REFRESH:
-                iv_refresh_hint.setVisibility(INVISIBLE);
+            case DOWN:
                 iv_refresh_arrow.setVisibility(VISIBLE);
                 iv_refresh_arrow.clearAnimation();
-                tv_refresh_hint.setText("下拉刷新");
+                iv_refresh_hint.setVisibility(INVISIBLE);
+                tv_refresh_hint.setText("pull down to refresh");
                 break;
 
-            case RELEASE_TO_REFRESH:
+            case DOWN_RELEASABLE:
                 iv_refresh_arrow.startAnimation(arrowAnimation);
-                tv_refresh_hint.setText("释放刷新");
+                tv_refresh_hint.setText("release to refresh");
                 break;
 
-            case REFRESH:
+            case DOWN_RELEASE:
                 iv_refresh_arrow.clearAnimation();
                 iv_refresh_arrow.setVisibility(INVISIBLE);
                 iv_refresh_loading.setVisibility(VISIBLE);
                 iv_refresh_loading.startAnimation(loadingAnimation);
-                tv_refresh_hint.setText("正在刷新");
+                tv_refresh_hint.setText("refreshing");
                 if(mOnPullListener != null)
                     mOnPullListener.onRefresh();
                 break;
 
-            case PULL_TO_LOADMORE:
-                iv_loadmore_hint.setVisibility(INVISIBLE);
-                iv_loadmore_arrow.clearAnimation();
+            case UP:
                 iv_loadmore_arrow.setVisibility(VISIBLE);
-                tv_loadmore_hint.setText("上拉加载更多");
+                iv_loadmore_arrow.clearAnimation();
+                iv_loadmore_hint.setVisibility(INVISIBLE);
+                tv_loadmore_hint.setText("pull up to load more");
                 break;
 
-            case RELEASE_TO_LOADMORE:
+            case UP_RELEASABLE:
                 iv_loadmore_arrow.startAnimation(arrowAnimation);
-                tv_loadmore_hint.setText("释放加载更多");
+                tv_loadmore_hint.setText("release to load more");
                 break;
 
-            case LOADMORE:
+            case UP_RELEASE:
                 iv_loadmore_arrow.clearAnimation();
                 iv_loadmore_arrow.setVisibility(INVISIBLE);
                 iv_loadmore_loading.setVisibility(VISIBLE);
                 iv_loadmore_loading.startAnimation(loadingAnimation);
-                tv_loadmore_hint.setText("正在加载更多");
+                tv_loadmore_hint.setText("loading more");
                 if(mOnPullListener != null)
                     mOnPullListener.onLoadmore();
                 break;
@@ -308,6 +303,7 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
 
     public interface OnPullListener{
         void onRefresh();
+
         void onLoadmore();
     }
     private OnPullListener mOnPullListener;
@@ -317,14 +313,13 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
     }
 
     private class CTimer{
-        private Timer timer;
-        private Handler handler;
+        private Timer mTimer;
         private Task mTask;
-
+        private Handler handler;
         public CTimer(Handler handler)
         {
             this.handler = handler;
-            timer = new Timer();
+            mTimer = new Timer();
         }
 
         public void cancel()
@@ -340,15 +335,16 @@ public class C61_Strengthen2RefreshLayoutExercise2 extends RelativeLayout {
         {
             cancel();
             mTask = new Task(handler);
-            timer.schedule(mTask, 0, period);
+            mTimer.schedule(mTask, 0, period);
         }
 
         private class Task extends TimerTask{
             private Handler handler;
-            public Task(Handler handler)
-            {
+
+            public Task(Handler handler) {
                 this.handler = handler;
             }
+
             @Override
             public void run() {
                 handler.sendEmptyMessage(0);

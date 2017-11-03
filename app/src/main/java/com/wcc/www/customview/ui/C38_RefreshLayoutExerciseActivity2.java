@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C66_RefreshLayoutExercise13;
+import com.wcc.www.customview.custom.C81_RefreshLayoutExercise19;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
 public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
 
     private ListView lv;
-    private C66_RefreshLayoutExercise13 rl;
+    private C81_RefreshLayoutExercise19 rl;
     private int ids[] = {
             R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e,
     };
@@ -55,9 +55,9 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
             }
             adapter.notifyDataSetChanged();
             if(currentIndex == 3)
-                rl.stopPullBehavior(C66_RefreshLayoutExercise13.State.FAILURE);
+                rl.stopPullBehavior(C81_RefreshLayoutExercise19.State.FAILURE);
             else
-                rl.stopPullBehavior(C66_RefreshLayoutExercise13.State.SUCCESS);
+                rl.stopPullBehavior(C81_RefreshLayoutExercise19.State.SUCCESS);
         }
     };
     private BaseAdapter adapter;
@@ -70,8 +70,8 @@ public class C38_RefreshLayoutExerciseActivity2 extends AppCompatActivity {
         idss = new ArrayList<>();
         idss.add(ids[0]);
         lv = (ListView) findViewById(R.id.lv_c44);
-        rl = (C66_RefreshLayoutExercise13) lv.getParent();
-        rl.setOnPullListener(new C66_RefreshLayoutExercise13.OnPullListener() {
+        rl = (C81_RefreshLayoutExercise19) lv.getParent();
+        rl.setOnPullListener(new C81_RefreshLayoutExercise19.OnPullListener() {
             @Override
             public void pullDown() {
                 new Thread(){

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wcc.www.customview">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -60,22 +62,24 @@
             android:name=".other.LauchModeLifeCycleExploreActivity"
             android:launchMode="singleInstance" />
         <activity android:name=".ui.C36_RefreshLayoutActivity3" />
-        <activity android:name=".ui.C37_RefreshLayoutExerciseActivity"></activity>
-        <activity android:name=".ui.C38_RefreshLayoutExerciseActivity2">
+        <activity android:name=".ui.C37_RefreshLayoutExerciseActivity" />
+        <activity android:name=".ui.C38_RefreshLayoutExerciseActivity2" />
+        <activity android:name=".ui.C39_2RefreshLayoutActivity" />
+        <activity android:name=".ui.C40_2RefreshLayoutActivity2" />
+        <activity android:name=".ui.C41_Strengthen2RefreshLayoutActivity" />
+        <activity android:name=".ui.C42_Strengthen2RefreshLayoutExerciseActivity1" />
+        <activity android:name=".ui.C43_XListViewActivity" />
+        <activity android:name=".ui.C44_CanvasDrawXXXMethodReviewActivity" />
+        <activity android:name=".databinding.ui.D1_DataBindingActivity">
         </activity>
-        <activity android:name=".ui.C39_2RefreshLayoutActivity"></activity>
-        <activity android:name=".ui.C40_2RefreshLayoutActivity2">
-        </activity>
-        <activity android:name=".ui.C41_Strengthen2RefreshLayoutActivity"></activity>
-        <activity android:name=".ui.C42_Strengthen2RefreshLayoutExerciseActivity1">
+        <activity android:name=".databinding.ui.D2_RecyclerViewActivity"></activity>
+        <activity android:name=".databinding.ui.D3_ExpressionActivity"></activity>
+        <activity android:name=".databinding.ui.D4_ComponentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <activity android:name=".ui.C43_XListViewActivity">
         </activity>
     </application>
 

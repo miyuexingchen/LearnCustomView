@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import com.wcc.www.customview.R;
 import com.wcc.www.customview.customstore.C50_PullableListView;
-import com.wcc.www.customview.custom.C68_Strengthen2RefreshLayoutExercise3;
+import com.wcc.www.customview.custom.C82_Strengthen2RefreshLayoutExercise6;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
 public class C42_Strengthen2RefreshLayoutExerciseActivity1 extends AppCompatActivity {
 
     private C50_PullableListView lv;
-    private C68_Strengthen2RefreshLayoutExercise3 rl;
+    private C82_Strengthen2RefreshLayoutExercise6 rl;
 
     private int[] ids = {
             R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e,
@@ -97,8 +97,8 @@ public class C42_Strengthen2RefreshLayoutExerciseActivity1 extends AppCompatActi
             }
         };
         lv.setAdapter(adapter);
-        rl = (C68_Strengthen2RefreshLayoutExercise3) lv.getParent();
-        rl.setOnPullListener(new C68_Strengthen2RefreshLayoutExercise3.OnPullListener() {
+        rl = (C82_Strengthen2RefreshLayoutExercise6) lv.getParent();
+        rl.setOnPullListener(new C82_Strengthen2RefreshLayoutExercise6.OnPullListener() {
             @Override
             public void onRefresh() {
                 handler.sendEmptyMessageDelayed(0, 500);

@@ -9,4 +9,5 @@
     <color name="smart_ui_loading_layout_text_color">#515151</color>
 
     <color name="light_blue">#990000ff</color>
+    <color name="red">#ff0000</color>
 </resources>

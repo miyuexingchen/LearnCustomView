@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wcc.www.customview.custom.C66_RefreshLayoutExercise13 xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wcc.www.customview.custom.C81_RefreshLayoutExercise19 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:smart_ui_background="#330000ff"
-    app:smart_ui_enable_pull_up="false"
+    app:smart_ui_enable_pull_up="true"
     tools:context="com.wcc.www.customview.ui.C38_RefreshLayoutExerciseActivity2">
 
     <ListView
@@ -13,4 +13,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</com.wcc.www.customview.custom.C66_RefreshLayoutExercise13>
+</com.wcc.www.customview.custom.C81_RefreshLayoutExercise19>

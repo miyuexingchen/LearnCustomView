@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.wcc.www.customview.R;
-import com.wcc.www.customview.custom.C67_2RefreshLayoutExercise7;
+import com.wcc.www.customview.custom.C77_2RefreshLayoutExercise10;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class C40_2RefreshLayoutActivity2 extends AppCompatActivity {
             R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e,
     };
     private List<Integer> idss;
-    private C67_2RefreshLayoutExercise7 rl;
+    private C77_2RefreshLayoutExercise10 rl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +46,11 @@ public class C40_2RefreshLayoutActivity2 extends AppCompatActivity {
         idss = new ArrayList<>();
         idss.add(ids[0]);
         ListView lv = (ListView) findViewById(R.id.lv_c49);
-        rl = (C67_2RefreshLayoutExercise7) lv.getParent();
-        rl.setOnRefreshListener(new C67_2RefreshLayoutExercise7.OnRefreshListener() {
+        rl = (C77_2RefreshLayoutExercise10) lv.getParent();
+        rl.setOnRefreshListener(new C77_2RefreshLayoutExercise10.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                handler.sendEmptyMessageDelayed(0, 5000);
+                handler.sendEmptyMessageDelayed(0, 500);
             }
         });
         adapter = new BaseAdapter() {

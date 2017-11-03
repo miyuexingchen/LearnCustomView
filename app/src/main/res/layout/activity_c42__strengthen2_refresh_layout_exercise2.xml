@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wcc.www.customview.custom.C68_Strengthen2RefreshLayoutExercise3 xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wcc.www.customview.custom.C82_Strengthen2RefreshLayoutExercise6 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,4 +14,4 @@
         android:layout_height="match_parent" />
 
     <include layout="@layout/layout_strengthen_loadmore" />
-</com.wcc.www.customview.custom.C68_Strengthen2RefreshLayoutExercise3>
+</com.wcc.www.customview.custom.C82_Strengthen2RefreshLayoutExercise6>

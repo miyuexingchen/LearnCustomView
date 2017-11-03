@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wcc.www.customview.custom.C67_2RefreshLayoutExercise7 xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wcc.www.customview.custom.C77_2RefreshLayoutExercise10 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,4 +13,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</com.wcc.www.customview.custom.C67_2RefreshLayoutExercise7>
+</com.wcc.www.customview.custom.C77_2RefreshLayoutExercise10>

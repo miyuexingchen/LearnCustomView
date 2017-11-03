@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="person"
+            type="com.wcc.www.customview.databinding.entity.Person"
+            />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.wcc.www.customview.databinding.ui.D3_ExpressionActivity">
+
+        <ImageView
+            app:imageUrl="@{person.avatar}"
+            app:placeholder="@{@drawable/b1}"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+    </LinearLayout>
+</layout>
